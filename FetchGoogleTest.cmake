@@ -10,6 +10,11 @@ FetchContent_Declare(FetchGoogleTest
     GIT_TAG ${FETCH_GOOGLETEST_TAG}
 )
 
+set(BUILD_SHARED_LIBS NO)
+set_directory_properties(PROPERTIES
+    EXCLUDE_FROM_ALL YES
+)
+
 FetchContent_MakeAvailable(FetchGoogleTest)
 
 include(GoogleTest)
